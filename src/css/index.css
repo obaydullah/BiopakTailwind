@@ -148,20 +148,35 @@ body {
 
 /* menu top component  */
 @layer components {
+  /* common  */
+  .heading {
+    @apply text-center font-bold font-montserrat py-4 text-3xl;
+  }
+  .primary-button {
+    @apply text-sm font-bold bg-primary px-7 py-2 rounded-md text-white inline-block;
+  }
+
+  /* header  */
   .top-menu-li {
     @apply uppercase font-roboto px-2 py-[10px] text-[13px] font-bold;
+  }
+  .top-menu-li-a {
+    @apply border-b border-semi_white hover:text-primary_light_dark hover:border-b hover:border-primary_light_dark;
+  }
+  .dropdown-menu-li {
+    @apply p-4 uppercase text-[13px] border-b border-border_color_two border-opacity-50;
   }
   .main-menu-li {
     @apply font-roboto text-base font-bold flex items-center;
   }
   .main-menu-li-a {
-    @apply flex items-center p-2 border-b-4 border-solid duration-500 border-primary hover:border-b-4 hover:border-solid hover:border-primary_dark;
+    @apply flex items-center p-2 px-4 gap-1 border-b-4 border-solid duration-500 border-primary hover:border-b-4 hover:border-solid hover:border-primary_dark relative;
   }
-  .main-menu-li-a {
-    @apply flex items-center p-2 border-b-4 border-solid duration-500 border-primary hover:border-b-4 hover:border-solid hover:border-primary_dark;
-  }
-  .primary-button {
-    @apply text-sm font-bold bg-primary px-7 py-2 rounded-md text-white inline-block;
+  /* header  */
+
+  /* footer  */
+  .accordion-body {
+    @apply overflow-hidden duration-300 ease-out max-h-0 lg:max-h-full lg:mt-0;
   }
 }
 

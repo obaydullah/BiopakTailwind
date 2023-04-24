@@ -6,7 +6,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biopack</title>
+    <link rel="stylesheet" href="../dist/css/slick.min.css">
     <link rel="stylesheet" href="../dist/css/index.css">
+
+
+    <style>
+        .slick-track {
+            display: flex;
+            gap: 20px;
+        }
+
+        .dropdown-show {
+            display: none
+        }
+
+        .list_class {
+            background: #efece7;
+        }
+
+        /* .header_menu_one {
+            order: 1
+        }
+
+        .header_menu_two {
+            order: 2
+        }
+
+        .header_menu_three {
+            order: 3
+        } */
+    </style>
 </head>
 
 <body>
@@ -22,15 +51,28 @@
         <!-- header top area end -->
 
         <!-- top menu start  -->
-        <nav class="bg-semi_white">
+        <nav class="bg-semi_white hidden lg:block">
             <div class="container w-90 flex justify-between">
                 <div>
-                    <ul class="flex items-center gap-5">
-                        <li class="@apply top-menu-li pl-0"><a href="#">Custom Packaging</a></li>
-                        <li class="@apply top-menu-li flex items-center"><a href="#">Shop Industry</a> <iconify-icon
-                                icon="material-symbols:keyboard-arrow-down-rounded"
-                                class="text-xl text-semi_black"></iconify-icon></li>
-                        <li class="@apply top-menu-li"> <a href="#">Plastic Bans</a></li>
+                    <ul class="flex items-center gap-5 h-full">
+                        <li class="@apply top-menu-li pl-0"><a class="@apply top-menu-li-a" href="#">Custom
+                                Packaging</a></li>
+                        <li class="@apply top-menu-li flex items-center group relative"><a class="@apply top-menu-li-a"
+                                href="#">Shop
+                                Industry</a> <iconify-icon icon="material-symbols:keyboard-arrow-down-rounded"
+                                class="text-xl text-semi_black group-hover:text-primary_light_dark group-hover:rotate-180"></iconify-icon>
+
+                            <ul
+                                class="absolute top-full left-0 w-[170px] hidden group-hover:block bg-white border border-border_color_two z-50 dropdown-show">
+                                <li class="@apply dropdown-menu-li">
+                                    <a href="#" class="hover:text-primary_light_dark">Events</a>
+                                </li>
+                                <li class="@apply dropdown-menu-li border-b-0">
+                                    <a href="#" class="hover:text-primary_light_dark">Restaurants & Cafes</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="@apply top-menu-li"> <a class="@apply top-menu-li-a" href="#">Plastic Bans</a></li>
                     </ul>
                 </div>
 
@@ -39,27 +81,91 @@
                         <ul class="flex items-center gap-4">
                             <li class="@apply top-menu-li pl-0"><a href="#">Contact</a></li>
                             <li class="@apply top-menu-li"><a href="#">Shipping </a></li>
-                            <li class="@apply top-menu-li flex items-center"><a href="#">Materials</a>
-                                <iconify-icon icon="material-symbols:keyboard-arrow-down-rounded"
-                                    class="text-xl text-semi_black"></iconify-icon>
+                            <li class="@apply top-menu-li flex items-center group relative"><a
+                                    class="@apply top-menu-li-a" href="#">Materials</a> <iconify-icon
+                                    icon="material-symbols:keyboard-arrow-down-rounded"
+                                    class="text-xl text-semi_black group-hover:text-primary_light_dark group-hover:rotate-180"></iconify-icon>
+
+                                <ul
+                                    class="absolute top-full left-0 w-[170px] hidden group-hover:block bg-white border border-border_color_two z-50">
+                                    <li class="@apply dropdown-menu-li">
+                                        <a href="#" class="hover:text-primary_light_dark">AQUEOUS</a>
+                                    </li>
+                                </ul>
                             </li>
-                            <li class="@apply top-menu-li flex items-center"><a href="#">Disposal</a>
-                                <iconify-icon icon="material-symbols:keyboard-arrow-down-rounded"
-                                    class="text-xl text-semi_black"></iconify-icon>
+                            <li class="@apply top-menu-li flex items-center group relative"><a
+                                    class="@apply top-menu-li-a" href="#">Disposal</a> <iconify-icon
+                                    icon="material-symbols:keyboard-arrow-down-rounded"
+                                    class="text-xl text-semi_black group-hover:text-primary_light_dark group-hover:rotate-180"></iconify-icon>
+
+                                <ul
+                                    class="absolute top-full left-0 w-[170px] hidden group-hover:block bg-white border border-border_color_two z-50">
+                                    <li class="@apply dropdown-menu-li">
+                                        <a href="#" class="hover:text-primary_light_dark">Dispose your packaging</a>
+                                    </li>
+                                    <li class="@apply dropdown-menu-li border-b-0">
+                                        <a href="#" class="hover:text-primary_light_dark">Compose Connect</a>
+                                    </li>
+                                </ul>
                             </li>
-                            <li class="@apply top-menu-li flex items-center"><a href="#">Resources</a>
-                                <iconify-icon icon="material-symbols:keyboard-arrow-down-rounded"
-                                    class="text-xl text-semi_black"></iconify-icon>
+                            <li class="@apply top-menu-li flex items-center group relative"><a
+                                    class="@apply top-menu-li-a" href="#">Resources</a> <iconify-icon
+                                    icon="material-symbols:keyboard-arrow-down-rounded"
+                                    class="text-xl text-semi_black group-hover:text-primary_light_dark group-hover:rotate-180"></iconify-icon>
+
+                                <ul
+                                    class="absolute top-full left-0 w-[170px] hidden group-hover:block bg-white border border-border_color_two z-50">
+                                    <li class="@apply dropdown-menu-li">
+                                        <a href="#" class="hover:text-primary_light_dark">Events</a>
+                                    </li>
+                                    <li class="@apply dropdown-menu-li border-b-0">
+                                        <a href="#" class="hover:text-primary_light_dark">Restaurants & Cafes</a>
+                                    </li>
+                                </ul>
                             </li>
-                            <li class="@apply top-menu-li flex items-center"><a href="#">About</a>
-                                <iconify-icon icon="material-symbols:keyboard-arrow-down-rounded"
-                                    class="text-xl text-semi_black"></iconify-icon>
+                            <li class="@apply top-menu-li flex items-center group relative"><a
+                                    class="@apply top-menu-li-a" href="#">About</a> <iconify-icon
+                                    icon="material-symbols:keyboard-arrow-down-rounded"
+                                    class="text-xl text-semi_black group-hover:text-primary_light_dark group-hover:rotate-180"></iconify-icon>
+
+                                <ul
+                                    class="absolute top-full left-0 w-[170px] hidden group-hover:block bg-white border border-border_color_two z-50">
+                                    <li class="@apply dropdown-menu-li">
+                                        <a href="#" class="hover:text-primary_light_dark">Why choose us</a>
+                                    </li>
+                                    <li class="@apply dropdown-menu-li border-b-0">
+                                        <a href="#" class="hover:text-primary_light_dark">Sustainability</a>
+                                    </li>
+                                    <li class="@apply dropdown-menu-li border-b-0">
+                                        <a href="#" class="hover:text-primary_light_dark">Compost Connect</a>
+                                    </li>
+                                </ul>
                             </li>
-                            <li class="@apply top-menu-li flex items-center text-xs">
-                                <img class="h-6 w-auto mr-1" src="../assets/images/home/flag_au.webp" alt="Australia">
+                            <li
+                                class=" @apply top-menu-li flex items-center text-xs group cursor-pointer relative pr-0">
+                                <img class="h-6 w-auto mr-1" src="../assets/images/home/flag/flag_au.webp"
+                                    alt="Australia">
                                 <p>AU</p>
                                 <iconify-icon icon="material-symbols:keyboard-arrow-down-rounded"
-                                    class="text-xl text-semi_black"></iconify-icon>
+                                    class="text-xl text-semi_black group-hover:rotate-180"></iconify-icon>
+
+                                <ul
+                                    class="absolute top-full right-1 w-[100px] hidden group-hover:block bg-white border border-border_color_two z-50">
+                                    <li class="@apply dropdown-menu-li flex gap-2 items-center justify-center">
+                                        <img class="h-6 w-auto" src="../assets/images/home/flag/flag_us.webp" alt="">
+                                        <a href="#" class="group-hover:text-primary_light_dark">US</a>
+                                    </li>
+                                    <li class="@apply dropdown-menu-li flex gap-2 items-center justify-center">
+                                        <img class="h-6 w-auto" src="../assets/images/home/flag/flag_uk.webp" alt="">
+                                        <a href="#" class="group-hover:text-primary_light_dark">UK</a>
+                                    </li>
+                                    <li class="@apply dropdown-menu-li flex gap-2 items-center justify-center">
+                                        <img class="h-6 w-auto" src="../assets/images/home/flag/flag_au.webp" alt="">
+                                        <a href="#" class="group-hover:text-primary_light_dark">AU</a>
+                                    </li>
+
+
+                                </ul>
                             </li>
                         </ul>
                     </ul>
@@ -69,11 +175,19 @@
         <!-- top menu end  -->
 
         <!-- header content start  -->
-        <section class="bg-white">
-            <div class="container w-90 flex justify-between items-center py-5">
-                <img src="../assets/images/home/logo.svg" alt="Logo" class="max-w-[181px] w-full h-auto">
+        <section class=" bg-white">
+            <div class="container w-90 flex justify-between items-center py-5 relative">
 
-                <form class="max-w-[400px] w-full">
+                <div class="absolute top-0 left-0 h-full lg:hidden flex gap-2 items-center">
+                    <iconify-icon onclick="menuOpen()" class="text-4xl text-primary_light_dark cursor-pointer"
+                        icon="ic:outline-menu"></iconify-icon>
+                    <iconify-icon class="text-4xl text-primary_light_dark cursor-pointer"
+                        icon="ic:baseline-search"></iconify-icon>
+                </div>
+
+                <img src="../assets/images/home/logo.svg" alt="Logo" class="max-w-[181px] w-full h-auto mx-auto lg:m-0">
+
+                <form class="max-w-[400px] w-full hidden lg:block">
                     <div class="border border-solid border-border_color px-4 py-2.5 flex items-center gap-2 rounded-md">
                         <button type="submit" class="flex items-center pl-2"><iconify-icon
                                 icon="material-symbols:search"
@@ -83,7 +197,7 @@
                     </div>
                 </form>
 
-                <div class="max-w-[184px]">
+                <div class="max-w-[184px] hidden lg:block">
                     <ul class="flex items-center gap-8">
                         <li>
                             <a href="#" class="flex flex-col gap-2 justify-center items-center text-primary">
@@ -105,50 +219,870 @@
         <!-- header content end -->
 
         <!-- main nav section start  -->
-        <nav class="bg-primary text-white">
+        <nav class="bg-primary text-white hidden lg:block relative">
             <div class="container mx-auto w-90 flex justify-between">
                 <ul class="flex items-center">
-                    <li class="@apply main-menu-li"> <a href="#" class="@apply main-menu-li-a">
-                            Cups <iconify-icon class="text-xl"
-                                icon="material-symbols:keyboard-arrow-down-rounded"></iconify-icon>
+                    <li class="@apply main-menu-li group"> <a href="#" class="@apply main-menu-li-a">
+                            Cups <img src="../assets/icons/down-arrow.svg" alt="" class="h-[10px] w-[10px]">
                         </a>
+
+                        <!-- megamenu start -->
+                        <div
+                            class="absolute top-full left-0 w-screen opacity-0 invisible duration-500 group-hover:opacity-100 group-hover:visible bg-white border border-border_color_two z-50">
+                            <div class="container text-semi_black flex">
+                                <div class="p-2 py-3 w-56">
+                                    <ul>
+                                        <li class="text-base cursor-pointer">
+                                            <a href="#"
+                                                class="block text-semi_black hover:text-primary_light_dark hover:underline">Picnics
+                                                &
+                                                Parties</a>
+                                        </li>
+
+                                        <li class="text-xs cursor-pointer">
+                                            <a href="#" class="block text-primary_light_dark hover:underline">All</a>
+                                        </li>
+
+                                        <li class="text base text-semi_black mt-3"><a href="#"
+                                                class="flex items-center gap-2 hover:underline hover:text-primary_light_dark">
+                                                <img class="mt-[-2px] w-8 h-auto"
+                                                    src="../assets/images/home/Plates_BioCane.webp" alt="">
+                                                Mixed Range
+                                            </a></li>
+                                        <li class="text base text-semi_black mt-3"><a href="#"
+                                                class="flex items-center gap-2 hover:underline hover:text-primary_light_dark">
+                                                <img class="mt-[-2px] w-8 h-auto"
+                                                    src="../assets/images/home/Straws-Regular.webp" alt="">
+                                                Straws
+                                            </a></li>
+                                    </ul>
+                                </div>
+
+                                <div class="p-2 py-3 w-56">
+                                    <ul>
+                                        <li class="text-base cursor-pointer">
+                                            <a href="#"
+                                                class="block text-semi_black hover:text-primary_light_dark hover:underline">Picnics
+                                                &
+                                                Parties</a>
+                                        </li>
+
+                                        <li class="text-xs cursor-pointer">
+                                            <a href="#" class="block text-primary_light_dark hover:underline">All</a>
+                                        </li>
+
+                                        <li class="text base text-semi_black mt-3"><a href="#"
+                                                class="flex items-center gap-2 hover:underline hover:text-primary_light_dark">
+                                                <img class="mt-[-2px] w-8 h-auto"
+                                                    src="../assets/images/home/Plates_BioCane.webp" alt="">
+                                                Mixed Range
+                                            </a></li>
+                                        <li class="text base text-semi_black mt-3"><a href="#"
+                                                class="flex items-center gap-2 hover:underline hover:text-primary_light_dark">
+                                                <img class="mt-[-2px] w-8 h-auto"
+                                                    src="../assets/images/home/Straws-Regular.webp" alt="">
+                                                Straws
+                                            </a></li>
+                                    </ul>
+                                </div>
+
+                                <div class="p-2 py-3 w-72 ml-auto">
+                                    <ul>
+                                        <li class="text-base cursor-pointer ">
+                                            <a href="#"
+                                                class="block text-semi_black hover:text-primary_light_dark hover:underline">Featured</a>
+                                        </li>
+
+                                        <li>
+                                            <img class="w-60 h-auto"
+                                                src="../assets/images/home/biopak-mega-menu-custom-retail-range.webp"
+                                                alt="">
+                                        </li>
+
+                                        <li
+                                            class="text-sm text-semi_black mt-3 flex items-center justify-between gap-2 border-b border-border_color_two border-opacity-50 pb-2 mb-2">
+                                            <div class="leading-4">
+                                                <span class="text-[11px] text-semi_black_two uppercase">Customize</span>
+                                                <h6>Order your Napkins</h6>
+                                            </div>
+                                            <div>
+                                                <a href="#"
+                                                    class="text-[11px] font-bold text-primary_light_dark hover:text-primary_light_dark hover:underline whitespace-nowrap">Learn
+                                                    more</a>
+                                            </div>
+                                        </li>
+                                        <li
+                                            class="text-sm text-semi_black mt-3 flex items-center justify-between gap-2 border-b border-border_color_two border-opacity-50 pb-2 mb-2">
+                                            <div class="leading-4">
+                                                <span class="text-[11px] uppercase text-semi_black_two">Promote</span>
+                                                <h6>Order free marketing</h6>
+                                            </div>
+                                            <div>
+                                                <a href="#"
+                                                    class="text-[11px] font-bold text-primary_light_dark hover:text-primary_light_dark hover:underline whitespace-nowrap">Order
+                                                    now</a>
+                                            </div>
+                                        </li>
+                                        <li
+                                            class="text-sm text-semi_black mt-3 flex items-center justify-between gap-2 border-b border-border_color_two border-opacity-50 pb-2 mb-2">
+                                            <div class="leading-4">
+                                                <span class="text-[11px] uppercase text-semi_black_two">Environmental
+                                                    Leadership</span>
+                                                <h6>What it means to be a B Corp</h6>
+                                            </div>
+                                            <div>
+                                                <a href="#"
+                                                    class="text-[11px] font-bold text-primary_light_dark hover:text-primary_light_dark hover:underline whitespace-nowrap">Learn
+                                                    more</a>
+                                            </div>
+                                        </li>
+
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- megamenu end  -->
                     </li>
-                    <li class="@apply main-menu-li"> <a href="#" class="@apply main-menu-li-a">
-                            Container & Lids <iconify-icon class="text-xl"
-                                icon="material-symbols:keyboard-arrow-down-rounded"></iconify-icon>
+
+                    <li class="@apply main-menu-li group"> <a href="#" class="@apply main-menu-li-a">
+                            Container & Lids <img src="../assets/icons/down-arrow.svg" alt="" class="h-[10px] w-[10px]">
                         </a>
+
+                        <!-- megamenu start -->
+                        <div
+                            class="absolute top-full left-0 w-screen opacity-0 invisible duration-500 group-hover:opacity-100 group-hover:visible bg-white border border-border_color_two z-50">
+                            <div class="container text-semi_black flex">
+                                <div class="p-2 py-3 w-56">
+                                    <ul>
+                                        <li class="text-base cursor-pointer">
+                                            <a href="#"
+                                                class="block text-semi_black hover:text-primary_light_dark hover:underline">Picnics
+                                                &
+                                                Parties</a>
+                                        </li>
+
+                                        <li class="text-xs cursor-pointer">
+                                            <a href="#" class="block text-primary_light_dark hover:underline">All</a>
+                                        </li>
+
+                                        <li class="text base text-semi_black mt-3"><a href="#"
+                                                class="flex items-center gap-2 hover:underline hover:text-primary_light_dark">
+                                                <img class="mt-[-2px] w-8 h-auto"
+                                                    src="../assets/images/home/Plates_BioCane.webp" alt="">
+                                                Mixed Range
+                                            </a></li>
+                                        <li class="text base text-semi_black mt-3"><a href="#"
+                                                class="flex items-center gap-2 hover:underline hover:text-primary_light_dark">
+                                                <img class="mt-[-2px] w-8 h-auto"
+                                                    src="../assets/images/home/Straws-Regular.webp" alt="">
+                                                Straws
+                                            </a></li>
+                                    </ul>
+                                </div>
+
+                                <div class="p-2 py-3 w-56">
+                                    <ul>
+                                        <li class="text-base cursor-pointer">
+                                            <a href="#"
+                                                class="block text-semi_black hover:text-primary_light_dark hover:underline">Picnics
+                                                &
+                                                Parties</a>
+                                        </li>
+
+                                        <li class="text-xs cursor-pointer">
+                                            <a href="#" class="block text-primary_light_dark hover:underline">All</a>
+                                        </li>
+
+                                        <li class="text base text-semi_black mt-3"><a href="#"
+                                                class="flex items-center gap-2 hover:underline hover:text-primary_light_dark">
+                                                <img class="mt-[-2px] w-8 h-auto"
+                                                    src="../assets/images/home/Plates_BioCane.webp" alt="">
+                                                Mixed Range
+                                            </a></li>
+                                        <li class="text base text-semi_black mt-3"><a href="#"
+                                                class="flex items-center gap-2 hover:underline hover:text-primary_light_dark">
+                                                <img class="mt-[-2px] w-8 h-auto"
+                                                    src="../assets/images/home/Straws-Regular.webp" alt="">
+                                                Straws
+                                            </a></li>
+                                    </ul>
+                                </div>
+
+                                <div class="p-2 py-3 w-72 ml-auto">
+                                    <ul>
+                                        <li class="text-base cursor-pointer ">
+                                            <a href="#"
+                                                class="block text-semi_black hover:text-primary_light_dark hover:underline">Featured</a>
+                                        </li>
+
+                                        <li>
+                                            <img class="w-60 h-auto"
+                                                src="../assets/images/home/biopak-mega-menu-custom-retail-range.webp"
+                                                alt="">
+                                        </li>
+
+                                        <li
+                                            class="text-sm text-semi_black mt-3 flex items-center justify-between gap-2 border-b border-border_color_two border-opacity-50 pb-2 mb-2">
+                                            <div class="leading-4">
+                                                <span class="text-[11px] text-semi_black_two uppercase">Customize</span>
+                                                <h6>Order your Napkins</h6>
+                                            </div>
+                                            <div>
+                                                <a href="#"
+                                                    class="text-[11px] font-bold text-primary_light_dark hover:text-primary_light_dark hover:underline whitespace-nowrap">Learn
+                                                    more</a>
+                                            </div>
+                                        </li>
+                                        <li
+                                            class="text-sm text-semi_black mt-3 flex items-center justify-between gap-2 border-b border-border_color_two border-opacity-50 pb-2 mb-2">
+                                            <div class="leading-4">
+                                                <span class="text-[11px] uppercase text-semi_black_two">Promote</span>
+                                                <h6>Order free marketing</h6>
+                                            </div>
+                                            <div>
+                                                <a href="#"
+                                                    class="text-[11px] font-bold text-primary_light_dark hover:text-primary_light_dark hover:underline whitespace-nowrap">Order
+                                                    now</a>
+                                            </div>
+                                        </li>
+                                        <li
+                                            class="text-sm text-semi_black mt-3 flex items-center justify-between gap-2 border-b border-border_color_two border-opacity-50 pb-2 mb-2">
+                                            <div class="leading-4">
+                                                <span class="text-[11px] uppercase text-semi_black_two">Environmental
+                                                    Leadership</span>
+                                                <h6>What it means to be a B Corp</h6>
+                                            </div>
+                                            <div>
+                                                <a href="#"
+                                                    class="text-[11px] font-bold text-primary_light_dark hover:text-primary_light_dark hover:underline whitespace-nowrap">Learn
+                                                    more</a>
+                                            </div>
+                                        </li>
+
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- megamenu end  -->
+
                     </li>
-                    <li class="@apply main-menu-li"> <a href="#" class="@apply main-menu-li-a">
+                    <li class="@apply main-menu-li group"> <a href="#" class="@apply main-menu-li-a">
                             Plates & Trays <iconify-icon class="text-xl"
                                 icon="material-symbols:keyboard-arrow-down-rounded"></iconify-icon>
                         </a>
+                        <!-- megamenu start -->
+                        <div
+                            class="absolute top-full left-0 w-screen opacity-0 invisible duration-500 group-hover:opacity-100 group-hover:visible bg-white border border-border_color_two z-50">
+                            <div class="container text-semi_black flex">
+                                <div class="p-2 py-3 w-56">
+                                    <ul>
+                                        <li class="text-base cursor-pointer">
+                                            <a href="#"
+                                                class="block text-semi_black hover:text-primary_light_dark hover:underline">Picnics
+                                                &
+                                                Parties</a>
+                                        </li>
+
+                                        <li class="text-xs cursor-pointer">
+                                            <a href="#" class="block text-primary_light_dark hover:underline">All</a>
+                                        </li>
+
+                                        <li class="text base text-semi_black mt-3"><a href="#"
+                                                class="flex items-center gap-2 hover:underline hover:text-primary_light_dark">
+                                                <img class="mt-[-2px] w-8 h-auto"
+                                                    src="../assets/images/home/Plates_BioCane.webp" alt="">
+                                                Mixed Range
+                                            </a></li>
+                                        <li class="text base text-semi_black mt-3"><a href="#"
+                                                class="flex items-center gap-2 hover:underline hover:text-primary_light_dark">
+                                                <img class="mt-[-2px] w-8 h-auto"
+                                                    src="../assets/images/home/Straws-Regular.webp" alt="">
+                                                Straws
+                                            </a></li>
+                                    </ul>
+                                </div>
+
+                                <div class="p-2 py-3 w-56">
+                                    <ul>
+                                        <li class="text-base cursor-pointer">
+                                            <a href="#"
+                                                class="block text-semi_black hover:text-primary_light_dark hover:underline">Picnics
+                                                &
+                                                Parties</a>
+                                        </li>
+
+                                        <li class="text-xs cursor-pointer">
+                                            <a href="#" class="block text-primary_light_dark hover:underline">All</a>
+                                        </li>
+
+                                        <li class="text base text-semi_black mt-3"><a href="#"
+                                                class="flex items-center gap-2 hover:underline hover:text-primary_light_dark">
+                                                <img class="mt-[-2px] w-8 h-auto"
+                                                    src="../assets/images/home/Plates_BioCane.webp" alt="">
+                                                Mixed Range
+                                            </a></li>
+                                        <li class="text base text-semi_black mt-3"><a href="#"
+                                                class="flex items-center gap-2 hover:underline hover:text-primary_light_dark">
+                                                <img class="mt-[-2px] w-8 h-auto"
+                                                    src="../assets/images/home/Straws-Regular.webp" alt="">
+                                                Straws
+                                            </a></li>
+                                    </ul>
+                                </div>
+
+                                <div class="p-2 py-3 w-72 ml-auto">
+                                    <ul>
+                                        <li class="text-base cursor-pointer ">
+                                            <a href="#"
+                                                class="block text-semi_black hover:text-primary_light_dark hover:underline">Featured</a>
+                                        </li>
+
+                                        <li>
+                                            <img class="w-60 h-auto"
+                                                src="../assets/images/home/biopak-mega-menu-custom-retail-range.webp"
+                                                alt="">
+                                        </li>
+
+                                        <li
+                                            class="text-sm text-semi_black mt-3 flex items-center justify-between gap-2 border-b border-border_color_two border-opacity-50 pb-2 mb-2">
+                                            <div class="leading-4">
+                                                <span class="text-[11px] text-semi_black_two uppercase">Customize</span>
+                                                <h6>Order your Napkins</h6>
+                                            </div>
+                                            <div>
+                                                <a href="#"
+                                                    class="text-[11px] font-bold text-primary_light_dark hover:text-primary_light_dark hover:underline whitespace-nowrap">Learn
+                                                    more</a>
+                                            </div>
+                                        </li>
+                                        <li
+                                            class="text-sm text-semi_black mt-3 flex items-center justify-between gap-2 border-b border-border_color_two border-opacity-50 pb-2 mb-2">
+                                            <div class="leading-4">
+                                                <span class="text-[11px] uppercase text-semi_black_two">Promote</span>
+                                                <h6>Order free marketing</h6>
+                                            </div>
+                                            <div>
+                                                <a href="#"
+                                                    class="text-[11px] font-bold text-primary_light_dark hover:text-primary_light_dark hover:underline whitespace-nowrap">Order
+                                                    now</a>
+                                            </div>
+                                        </li>
+                                        <li
+                                            class="text-sm text-semi_black mt-3 flex items-center justify-between gap-2 border-b border-border_color_two border-opacity-50 pb-2 mb-2">
+                                            <div class="leading-4">
+                                                <span class="text-[11px] uppercase text-semi_black_two">Environmental
+                                                    Leadership</span>
+                                                <h6>What it means to be a B Corp</h6>
+                                            </div>
+                                            <div>
+                                                <a href="#"
+                                                    class="text-[11px] font-bold text-primary_light_dark hover:text-primary_light_dark hover:underline whitespace-nowrap">Learn
+                                                    more</a>
+                                            </div>
+                                        </li>
+
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- megamenu end  -->
                     </li>
-                    <li class="@apply main-menu-li"> <a href="#" class="@apply main-menu-li-a">
-                            Curlery & Straws <iconify-icon class="text-xl"
-                                icon="material-symbols:keyboard-arrow-down-rounded"></iconify-icon>
+                    <li class="@apply main-menu-li group"> <a href="#" class="@apply main-menu-li-a">
+                            Curlery & Straws <img src="../assets/icons/down-arrow.svg" alt="" class="h-[10px] w-[10px]">
                         </a>
+
+                        <!-- megamenu start -->
+                        <div
+                            class="absolute top-full left-0 w-screen opacity-0 invisible duration-500 group-hover:opacity-100 group-hover:visible bg-white border border-border_color_two z-50">
+                            <div class="container text-semi_black flex">
+                                <div class="p-2 py-3 w-56">
+                                    <ul>
+                                        <li class="text-base cursor-pointer">
+                                            <a href="#"
+                                                class="block text-semi_black hover:text-primary_light_dark hover:underline">Picnics
+                                                &
+                                                Parties</a>
+                                        </li>
+
+                                        <li class="text-xs cursor-pointer">
+                                            <a href="#" class="block text-primary_light_dark hover:underline">All</a>
+                                        </li>
+
+                                        <li class="text base text-semi_black mt-3"><a href="#"
+                                                class="flex items-center gap-2 hover:underline hover:text-primary_light_dark">
+                                                <img class="mt-[-2px] w-8 h-auto"
+                                                    src="../assets/images/home/Plates_BioCane.webp" alt="">
+                                                Mixed Range
+                                            </a></li>
+                                        <li class="text base text-semi_black mt-3"><a href="#"
+                                                class="flex items-center gap-2 hover:underline hover:text-primary_light_dark">
+                                                <img class="mt-[-2px] w-8 h-auto"
+                                                    src="../assets/images/home/Straws-Regular.webp" alt="">
+                                                Straws
+                                            </a></li>
+                                    </ul>
+                                </div>
+
+                                <div class="p-2 py-3 w-56">
+                                    <ul>
+                                        <li class="text-base cursor-pointer">
+                                            <a href="#"
+                                                class="block text-semi_black hover:text-primary_light_dark hover:underline">Picnics
+                                                &
+                                                Parties</a>
+                                        </li>
+
+                                        <li class="text-xs cursor-pointer">
+                                            <a href="#" class="block text-primary_light_dark hover:underline">All</a>
+                                        </li>
+
+                                        <li class="text base text-semi_black mt-3"><a href="#"
+                                                class="flex items-center gap-2 hover:underline hover:text-primary_light_dark">
+                                                <img class="mt-[-2px] w-8 h-auto"
+                                                    src="../assets/images/home/Plates_BioCane.webp" alt="">
+                                                Mixed Range
+                                            </a></li>
+                                        <li class="text base text-semi_black mt-3"><a href="#"
+                                                class="flex items-center gap-2 hover:underline hover:text-primary_light_dark">
+                                                <img class="mt-[-2px] w-8 h-auto"
+                                                    src="../assets/images/home/Straws-Regular.webp" alt="">
+                                                Straws
+                                            </a></li>
+                                    </ul>
+                                </div>
+
+                                <div class="p-2 py-3 w-72 ml-auto">
+                                    <ul>
+                                        <li class="text-base cursor-pointer ">
+                                            <a href="#"
+                                                class="block text-semi_black hover:text-primary_light_dark hover:underline">Featured</a>
+                                        </li>
+
+                                        <li>
+                                            <img class="w-60 h-auto"
+                                                src="../assets/images/home/biopak-mega-menu-custom-retail-range.webp"
+                                                alt="">
+                                        </li>
+
+                                        <li
+                                            class="text-sm text-semi_black mt-3 flex items-center justify-between gap-2 border-b border-border_color_two border-opacity-50 pb-2 mb-2">
+                                            <div class="leading-4">
+                                                <span class="text-[11px] text-semi_black_two uppercase">Customize</span>
+                                                <h6>Order your Napkins</h6>
+                                            </div>
+                                            <div>
+                                                <a href="#"
+                                                    class="text-[11px] font-bold text-primary_light_dark hover:text-primary_light_dark hover:underline whitespace-nowrap">Learn
+                                                    more</a>
+                                            </div>
+                                        </li>
+                                        <li
+                                            class="text-sm text-semi_black mt-3 flex items-center justify-between gap-2 border-b border-border_color_two border-opacity-50 pb-2 mb-2">
+                                            <div class="leading-4">
+                                                <span class="text-[11px] uppercase text-semi_black_two">Promote</span>
+                                                <h6>Order free marketing</h6>
+                                            </div>
+                                            <div>
+                                                <a href="#"
+                                                    class="text-[11px] font-bold text-primary_light_dark hover:text-primary_light_dark hover:underline whitespace-nowrap">Order
+                                                    now</a>
+                                            </div>
+                                        </li>
+                                        <li
+                                            class="text-sm text-semi_black mt-3 flex items-center justify-between gap-2 border-b border-border_color_two border-opacity-50 pb-2 mb-2">
+                                            <div class="leading-4">
+                                                <span class="text-[11px] uppercase text-semi_black_two">Environmental
+                                                    Leadership</span>
+                                                <h6>What it means to be a B Corp</h6>
+                                            </div>
+                                            <div>
+                                                <a href="#"
+                                                    class="text-[11px] font-bold text-primary_light_dark hover:text-primary_light_dark hover:underline whitespace-nowrap">Learn
+                                                    more</a>
+                                            </div>
+                                        </li>
+
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- megamenu end  -->
                     </li>
-                    <li class="@apply main-menu-li"> <a href="#" class="@apply main-menu-li-a">
-                            Bags <iconify-icon class="text-xl"
-                                icon="material-symbols:keyboard-arrow-down-rounded"></iconify-icon>
+                    <li class="@apply main-menu-li group"> <a href="#" class="@apply main-menu-li-a">
+                            Bags <img src="../assets/icons/down-arrow.svg" alt="" class="h-[10px] w-[10px]">
                         </a>
+
+                        <!-- megamenu start -->
+                        <div
+                            class="absolute top-full left-0 w-screen opacity-0 invisible duration-500 group-hover:opacity-100 group-hover:visible bg-white border border-border_color_two z-50">
+                            <div class="container text-semi_black flex">
+                                <div class="p-2 py-3 w-56">
+                                    <ul>
+                                        <li class="text-base cursor-pointer">
+                                            <a href="#"
+                                                class="block text-semi_black hover:text-primary_light_dark hover:underline">Picnics
+                                                &
+                                                Parties</a>
+                                        </li>
+
+                                        <li class="text-xs cursor-pointer">
+                                            <a href="#" class="block text-primary_light_dark hover:underline">All</a>
+                                        </li>
+
+                                        <li class="text base text-semi_black mt-3"><a href="#"
+                                                class="flex items-center gap-2 hover:underline hover:text-primary_light_dark">
+                                                <img class="mt-[-2px] w-8 h-auto"
+                                                    src="../assets/images/home/Plates_BioCane.webp" alt="">
+                                                Mixed Range
+                                            </a></li>
+                                        <li class="text base text-semi_black mt-3"><a href="#"
+                                                class="flex items-center gap-2 hover:underline hover:text-primary_light_dark">
+                                                <img class="mt-[-2px] w-8 h-auto"
+                                                    src="../assets/images/home/Straws-Regular.webp" alt="">
+                                                Straws
+                                            </a></li>
+                                    </ul>
+                                </div>
+
+                                <div class="p-2 py-3 w-56">
+                                    <ul>
+                                        <li class="text-base cursor-pointer">
+                                            <a href="#"
+                                                class="block text-semi_black hover:text-primary_light_dark hover:underline">Picnics
+                                                &
+                                                Parties</a>
+                                        </li>
+
+                                        <li class="text-xs cursor-pointer">
+                                            <a href="#" class="block text-primary_light_dark hover:underline">All</a>
+                                        </li>
+
+                                        <li class="text base text-semi_black mt-3"><a href="#"
+                                                class="flex items-center gap-2 hover:underline hover:text-primary_light_dark">
+                                                <img class="mt-[-2px] w-8 h-auto"
+                                                    src="../assets/images/home/Plates_BioCane.webp" alt="">
+                                                Mixed Range
+                                            </a></li>
+                                        <li class="text base text-semi_black mt-3"><a href="#"
+                                                class="flex items-center gap-2 hover:underline hover:text-primary_light_dark">
+                                                <img class="mt-[-2px] w-8 h-auto"
+                                                    src="../assets/images/home/Straws-Regular.webp" alt="">
+                                                Straws
+                                            </a></li>
+                                    </ul>
+                                </div>
+
+                                <div class="p-2 py-3 w-72 ml-auto">
+                                    <ul>
+                                        <li class="text-base cursor-pointer ">
+                                            <a href="#"
+                                                class="block text-semi_black hover:text-primary_light_dark hover:underline">Featured</a>
+                                        </li>
+
+                                        <li>
+                                            <img class="w-60 h-auto"
+                                                src="../assets/images/home/biopak-mega-menu-custom-retail-range.webp"
+                                                alt="">
+                                        </li>
+
+                                        <li
+                                            class="text-sm text-semi_black mt-3 flex items-center justify-between gap-2 border-b border-border_color_two border-opacity-50 pb-2 mb-2">
+                                            <div class="leading-4">
+                                                <span class="text-[11px] text-semi_black_two uppercase">Customize</span>
+                                                <h6>Order your Napkins</h6>
+                                            </div>
+                                            <div>
+                                                <a href="#"
+                                                    class="text-[11px] font-bold text-primary_light_dark hover:text-primary_light_dark hover:underline whitespace-nowrap">Learn
+                                                    more</a>
+                                            </div>
+                                        </li>
+                                        <li
+                                            class="text-sm text-semi_black mt-3 flex items-center justify-between gap-2 border-b border-border_color_two border-opacity-50 pb-2 mb-2">
+                                            <div class="leading-4">
+                                                <span class="text-[11px] uppercase text-semi_black_two">Promote</span>
+                                                <h6>Order free marketing</h6>
+                                            </div>
+                                            <div>
+                                                <a href="#"
+                                                    class="text-[11px] font-bold text-primary_light_dark hover:text-primary_light_dark hover:underline whitespace-nowrap">Order
+                                                    now</a>
+                                            </div>
+                                        </li>
+                                        <li
+                                            class="text-sm text-semi_black mt-3 flex items-center justify-between gap-2 border-b border-border_color_two border-opacity-50 pb-2 mb-2">
+                                            <div class="leading-4">
+                                                <span class="text-[11px] uppercase text-semi_black_two">Environmental
+                                                    Leadership</span>
+                                                <h6>What it means to be a B Corp</h6>
+                                            </div>
+                                            <div>
+                                                <a href="#"
+                                                    class="text-[11px] font-bold text-primary_light_dark hover:text-primary_light_dark hover:underline whitespace-nowrap">Learn
+                                                    more</a>
+                                            </div>
+                                        </li>
+
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- megamenu end  -->
                     </li>
-                    <li class="@apply main-menu-li"> <a href="#" class="@apply main-menu-li-a">
+                    <li class="@apply main-menu-li group"> <a href="#" class="@apply main-menu-li-a">
                             Napkins & Washroom <iconify-icon class="text-xl"
                                 icon="material-symbols:keyboard-arrow-down-rounded"></iconify-icon>
                         </a>
+                        <!-- megamenu start -->
+                        <div
+                            class="absolute top-full left-0 w-screen opacity-0 invisible duration-500 group-hover:opacity-100 group-hover:visible bg-white border border-border_color_two z-50">
+                            <div class="container text-semi_black flex">
+                                <div class="p-2 py-3 w-56">
+                                    <ul>
+                                        <li class="text-base cursor-pointer">
+                                            <a href="#"
+                                                class="block text-semi_black hover:text-primary_light_dark hover:underline">Picnics
+                                                &
+                                                Parties</a>
+                                        </li>
+
+                                        <li class="text-xs cursor-pointer">
+                                            <a href="#" class="block text-primary_light_dark hover:underline">All</a>
+                                        </li>
+
+                                        <li class="text base text-semi_black mt-3"><a href="#"
+                                                class="flex items-center gap-2 hover:underline hover:text-primary_light_dark">
+                                                <img class="mt-[-2px] w-8 h-auto"
+                                                    src="../assets/images/home/Plates_BioCane.webp" alt="">
+                                                Mixed Range
+                                            </a></li>
+                                        <li class="text base text-semi_black mt-3"><a href="#"
+                                                class="flex items-center gap-2 hover:underline hover:text-primary_light_dark">
+                                                <img class="mt-[-2px] w-8 h-auto"
+                                                    src="../assets/images/home/Straws-Regular.webp" alt="">
+                                                Straws
+                                            </a></li>
+                                    </ul>
+                                </div>
+
+                                <div class="p-2 py-3 w-56">
+                                    <ul>
+                                        <li class="text-base cursor-pointer">
+                                            <a href="#"
+                                                class="block text-semi_black hover:text-primary_light_dark hover:underline">Picnics
+                                                &
+                                                Parties</a>
+                                        </li>
+
+                                        <li class="text-xs cursor-pointer">
+                                            <a href="#" class="block text-primary_light_dark hover:underline">All</a>
+                                        </li>
+
+                                        <li class="text base text-semi_black mt-3"><a href="#"
+                                                class="flex items-center gap-2 hover:underline hover:text-primary_light_dark">
+                                                <img class="mt-[-2px] w-8 h-auto"
+                                                    src="../assets/images/home/Plates_BioCane.webp" alt="">
+                                                Mixed Range
+                                            </a></li>
+                                        <li class="text base text-semi_black mt-3"><a href="#"
+                                                class="flex items-center gap-2 hover:underline hover:text-primary_light_dark">
+                                                <img class="mt-[-2px] w-8 h-auto"
+                                                    src="../assets/images/home/Straws-Regular.webp" alt="">
+                                                Straws
+                                            </a></li>
+                                    </ul>
+                                </div>
+
+                                <div class="p-2 py-3 w-72 ml-auto">
+                                    <ul>
+                                        <li class="text-base cursor-pointer ">
+                                            <a href="#"
+                                                class="block text-semi_black hover:text-primary_light_dark hover:underline">Featured</a>
+                                        </li>
+
+                                        <li>
+                                            <img class="w-60 h-auto"
+                                                src="../assets/images/home/biopak-mega-menu-custom-retail-range.webp"
+                                                alt="">
+                                        </li>
+
+                                        <li
+                                            class="text-sm text-semi_black mt-3 flex items-center justify-between gap-2 border-b border-border_color_two border-opacity-50 pb-2 mb-2">
+                                            <div class="leading-4">
+                                                <span class="text-[11px] text-semi_black_two uppercase">Customize</span>
+                                                <h6>Order your Napkins</h6>
+                                            </div>
+                                            <div>
+                                                <a href="#"
+                                                    class="text-[11px] font-bold text-primary_light_dark hover:text-primary_light_dark hover:underline whitespace-nowrap">Learn
+                                                    more</a>
+                                            </div>
+                                        </li>
+                                        <li
+                                            class="text-sm text-semi_black mt-3 flex items-center justify-between gap-2 border-b border-border_color_two border-opacity-50 pb-2 mb-2">
+                                            <div class="leading-4">
+                                                <span class="text-[11px] uppercase text-semi_black_two">Promote</span>
+                                                <h6>Order free marketing</h6>
+                                            </div>
+                                            <div>
+                                                <a href="#"
+                                                    class="text-[11px] font-bold text-primary_light_dark hover:text-primary_light_dark hover:underline whitespace-nowrap">Order
+                                                    now</a>
+                                            </div>
+                                        </li>
+                                        <li
+                                            class="text-sm text-semi_black mt-3 flex items-center justify-between gap-2 border-b border-border_color_two border-opacity-50 pb-2 mb-2">
+                                            <div class="leading-4">
+                                                <span class="text-[11px] uppercase text-semi_black_two">Environmental
+                                                    Leadership</span>
+                                                <h6>What it means to be a B Corp</h6>
+                                            </div>
+                                            <div>
+                                                <a href="#"
+                                                    class="text-[11px] font-bold text-primary_light_dark hover:text-primary_light_dark hover:underline whitespace-nowrap">Learn
+                                                    more</a>
+                                            </div>
+                                        </li>
+
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- megamenu end  -->
                     </li>
-                    <li class="@apply main-menu-li"> <a href="#" class="@apply main-menu-li-a">
-                            Retail <iconify-icon class="text-xl"
-                                icon="material-symbols:keyboard-arrow-down-rounded"></iconify-icon>
+                    <li class="@apply main-menu-li group"> <a href="#" class="@apply main-menu-li-a">
+                            Retail <img src="../assets/icons/down-arrow.svg" alt="" class="h-[10px] w-[10px]">
                         </a>
+                        <!-- megamenu start -->
+                        <div
+                            class="absolute top-full left-0 w-screen opacity-0 invisible duration-500 group-hover:opacity-100 group-hover:visible bg-white border border-border_color_two z-50">
+                            <div class="container text-semi_black flex">
+                                <div class="p-2 py-3 w-56">
+                                    <ul>
+                                        <li class="text-base cursor-pointer">
+                                            <a href="#"
+                                                class="block text-semi_black hover:text-primary_light_dark hover:underline">Picnics
+                                                &
+                                                Parties</a>
+                                        </li>
+
+                                        <li class="text-xs cursor-pointer">
+                                            <a href="#" class="block text-primary_light_dark hover:underline">All</a>
+                                        </li>
+
+                                        <li class="text base text-semi_black mt-3"><a href="#"
+                                                class="flex items-center gap-2 hover:underline hover:text-primary_light_dark">
+                                                <img class="mt-[-2px] w-8 h-auto"
+                                                    src="../assets/images/home/Plates_BioCane.webp" alt="">
+                                                Mixed Range
+                                            </a></li>
+                                        <li class="text base text-semi_black mt-3"><a href="#"
+                                                class="flex items-center gap-2 hover:underline hover:text-primary_light_dark">
+                                                <img class="mt-[-2px] w-8 h-auto"
+                                                    src="../assets/images/home/Straws-Regular.webp" alt="">
+                                                Straws
+                                            </a></li>
+                                    </ul>
+                                </div>
+
+                                <div class="p-2 py-3 w-56">
+                                    <ul>
+                                        <li class="text-base cursor-pointer">
+                                            <a href="#"
+                                                class="block text-semi_black hover:text-primary_light_dark hover:underline">Picnics
+                                                &
+                                                Parties</a>
+                                        </li>
+
+                                        <li class="text-xs cursor-pointer">
+                                            <a href="#" class="block text-primary_light_dark hover:underline">All</a>
+                                        </li>
+
+                                        <li class="text base text-semi_black mt-3"><a href="#"
+                                                class="flex items-center gap-2 hover:underline hover:text-primary_light_dark">
+                                                <img class="mt-[-2px] w-8 h-auto"
+                                                    src="../assets/images/home/Plates_BioCane.webp" alt="">
+                                                Mixed Range
+                                            </a></li>
+                                        <li class="text base text-semi_black mt-3"><a href="#"
+                                                class="flex items-center gap-2 hover:underline hover:text-primary_light_dark">
+                                                <img class="mt-[-2px] w-8 h-auto"
+                                                    src="../assets/images/home/Straws-Regular.webp" alt="">
+                                                Straws
+                                            </a></li>
+                                    </ul>
+                                </div>
+
+                                <div class="p-2 py-3 w-72 ml-auto">
+                                    <ul>
+                                        <li class="text-base cursor-pointer ">
+                                            <a href="#"
+                                                class="block text-semi_black hover:text-primary_light_dark hover:underline">Featured</a>
+                                        </li>
+
+                                        <li>
+                                            <img class="w-60 h-auto"
+                                                src="../assets/images/home/biopak-mega-menu-custom-retail-range.webp"
+                                                alt="">
+                                        </li>
+
+                                        <li
+                                            class="text-sm text-semi_black mt-3 flex items-center justify-between gap-2 border-b border-border_color_two border-opacity-50 pb-2 mb-2">
+                                            <div class="leading-4">
+                                                <span class="text-[11px] text-semi_black_two uppercase">Customize</span>
+                                                <h6>Order your Napkins</h6>
+                                            </div>
+                                            <div>
+                                                <a href="#"
+                                                    class="text-[11px] font-bold text-primary_light_dark hover:text-primary_light_dark hover:underline whitespace-nowrap">Learn
+                                                    more</a>
+                                            </div>
+                                        </li>
+                                        <li
+                                            class="text-sm text-semi_black mt-3 flex items-center justify-between gap-2 border-b border-border_color_two border-opacity-50 pb-2 mb-2">
+                                            <div class="leading-4">
+                                                <span class="text-[11px] uppercase text-semi_black_two">Promote</span>
+                                                <h6>Order free marketing</h6>
+                                            </div>
+                                            <div>
+                                                <a href="#"
+                                                    class="text-[11px] font-bold text-primary_light_dark hover:text-primary_light_dark hover:underline whitespace-nowrap">Order
+                                                    now</a>
+                                            </div>
+                                        </li>
+                                        <li
+                                            class="text-sm text-semi_black mt-3 flex items-center justify-between gap-2 border-b border-border_color_two border-opacity-50 pb-2 mb-2">
+                                            <div class="leading-4">
+                                                <span class="text-[11px] uppercase text-semi_black_two">Environmental
+                                                    Leadership</span>
+                                                <h6>What it means to be a B Corp</h6>
+                                            </div>
+                                            <div>
+                                                <a href="#"
+                                                    class="text-[11px] font-bold text-primary_light_dark hover:text-primary_light_dark hover:underline whitespace-nowrap">Learn
+                                                    more</a>
+                                            </div>
+                                        </li>
+
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- megamenu end  -->
                     </li>
                 </ul>
 
 
                 <ul class="flex items-center bg-primary_light px-3">
-                    <li class="@apply main-menu-li"> <a href="#" class="flex items-center p-2 gap-1">
-                            <iconify-icon class="text-xl"
+                    <li class="@apply main-menu-li group"> <a href="#" class="flex items-center p-2 gap-1">
+                            <iconify-icon class="text-2xl mt-[-2px] duration-500 group-hover:rotate-180"
                                 icon="material-symbols:format-list-bulleted-rounded"></iconify-icon>
                             Price List
                         </a>
@@ -156,21 +1090,101 @@
 
                 </ul>
 
+
             </div>
         </nav>
         <!-- main nav section end -->
+
+
+        <!-- mobile menu start  -->
+
+        <div>
+
+            <div class="h-screen w-screen z-20 bg-black/50 fixed top-0 left-0 hidden" id="overlay"
+                onclick="menuClose()"></div>
+
+            <div class="fixed top-0 left-0 w-60 bg-black/80 h-full z-50 duration-1000 transform translate-x-[-100%]"
+                id="mobile_menu">
+                <div class="w-full bg-white h-screen flex flex-col">
+                    <div class="flex-1">
+                        <ul>
+                            <li class="flex items-center flex-col justify-between border-b border-border_color_two listElem"
+                                onClick="toggleDropdown(event)">
+                                <div class="list_head flex justify-between items-center w-full">
+                                    <a href="#" class="p-3 text-base header_menu_one">Cups</a>
+                                    <iconify-icon class="text-2xl text-primary_light_dark header_menu_two"
+                                        icon="ic:baseline-keyboard-arrow-right"></iconify-icon>
+                                    <a href="#"
+                                        class="text-xs underline text-primary_light_dark header_menu_three hidden"
+                                        style="padding-right: 10px;">Shop
+                                        All</a>
+                                </div>
+                                <ul class="flex flex-col grow dropdown-show">
+                                    <li><a href="#">about us </a></li>
+                                    <li><a href="#">about us </a></li>
+                                    <li><a href="#">about us </a></li>
+                                    <li><a href="#">about us </a></li>
+                                    <li><a href="#">about us </a></li>
+                                    <li><a href="#">about us </a></li>
+                                </ul>
+                            </li>
+
+                            <li class="flex items-center flex-col justify-between border-b border-border_color_two listElem"
+                                onClick="toggleDropdown(event)">
+                                <div class="list_head flex justify-between items-center w-full">
+                                    <a href="#" class="p-3 text-base header_menu_one">Sanitary</a>
+                                    <iconify-icon class="text-2xl text-primary_light_dark header_menu_two"
+                                        icon="ic:baseline-keyboard-arrow-right"></iconify-icon>
+                                    <a href="#"
+                                        class="text-xs underline text-primary_light_dark header_menu_three hidden"
+                                        style="padding-right: 10px;">Shop
+                                        All</a>
+                                </div>
+                                <ul class="flex flex-col grow dropdown-show">
+                                    <li><a href="#">about us </a></li>
+                                    <li><a href="#">about us </a></li>
+                                    <li><a href="#">about us </a></li>
+                                    <li><a href="#">about us </a></li>
+                                    <li><a href="#">about us </a></li>
+                                    <li><a href="#">about us </a></li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                    <div class=" @apply top-menu-li flex items-center text-xs group cursor-pointer pr-0">
+                        <img class="h-6 w-auto mr-1" src="../assets/images/home/flag/flag_au.webp" alt="Australia">
+                        <p>AU</p>
+                        <iconify-icon icon="material-symbols:keyboard-arrow-down-rounded"
+                            class="text-xl text-semi_black group-hover:rotate-180"></iconify-icon>
+                    </div>
+                </div>
+            </div>
+
+            <iconify-icon id="menu_close_icon"
+                class="fixed top-4 right-4 p-2 z-50 cursor-pointer hidden text-white text-3xl" onClick="menuClose()"
+                icon="material-symbols:close"></iconify-icon>
+        </div>
+        <!-- mobile menu end  -->
+
     </header>
 
 
     <main>
         <!-- hero area start -->
-        <section class="bg-hero-bg bg-cover bg-center bg-no-repeat py-24">
+        <section
+            class="bg-hero-bg bg-cover bg-center bg-no-repeat py-24 relative z-10 after:absolute after:top-0 after:left-0 after:w-full after:h-full after:bg-black after:content-[''] after:-z-10 after:opacity-30">
             <div class=" container mx-auto w-90 text-white">
                 <a href="#">
-                    <div class="max-w-[400px]">
+                    <div class="w-full text-center md:max-w-[400px] md:text-left">
                         <h1 class="uppercase text-[40px] leading-[49px] font-bold">Composable Packaging that puts the
                             planet first</h1>
-                        <p class="font-normal text-xl mt-4 w-[75%]">Compostable food packaging made from plants and
+                        <p class="font-normal text-xl mt-4 w-[60%] mx-auto md:mx-0 md:w-[85%] lg:w-[75%] ">Compostable
+                            food
+                            packaging
+                            made from
+                            plants and
                             designed for
                             the circular economy</p>
                         <button class="@apply primary-button mt-4" type="button" aria-label="Shop Now">Shop
@@ -184,47 +1198,49 @@
 
         <!-- category area start  -->
         <section>
-            <div class="container mx-auto w-90 flex items-end gap-10 justify-center py-10">
-                <a href="#" class="text-center">
-                    <img src="../assets/images/home/cups.webp" alt="">
-                    <h3 class="text-base text-primary_dark font-normal">Cups</h3>
-                </a>
-                <a href="#" class="text-center">
-                    <img src="../assets/images/home/napkins.webp" alt="">
-                    <h3 class="text-base text-primary_dark font-normal">Napkins</h3>
-                </a>
-                <a href="#" class="text-center">
-                    <img src="../assets/images/home/sandwitch.webp" alt="">
-                    <h3 class="text-base text-primary_dark font-normal">Sandwitch</h3>
-                </a>
-                <a href="#" class="text-center">
-                    <img src="../assets/images/home/sauce_cups.webp" alt="">
-                    <h3 class="text-base text-primary_dark font-normal">Sauce Cups</h3>
-                </a>
-                <a href="#" class="text-center">
-                    <img src="../assets/images/home/cups.webp" alt="">
-                    <h3 class="text-base text-primary_dark font-normal">Cups</h3>
-                </a>
-                <a href="#" class="text-center">
-                    <img src="../assets/images/home/napkins.webp" alt="">
-                    <h3 class="text-base text-primary_dark font-normal">Napkins</h3>
-                </a>
-                <a href="#" class="text-center">
-                    <img src="../assets/images/home/sandwitch.webp" alt="">
-                    <h3 class="text-base text-primary_dark font-normal">Sandwitch</h3>
-                </a>
-                <a href="#" class="text-center">
-                    <img src="../assets/images/home/sauce_cups.webp" alt="">
-                    <h3 class="text-base text-primary_dark font-normal">Sauce Cups</h3>
-                </a>
-                <a href="#" class="text-center">
-                    <img src="../assets/images/home/sandwitch.webp" alt="">
-                    <h3 class="text-base text-primary_dark font-normal">Sandwitch</h3>
-                </a>
-                <a href="#" class="text-center">
-                    <img src="../assets/images/home/sauce_cups.webp" alt="">
-                    <h3 class="text-base text-primary_dark font-normal">Sauce Cups</h3>
-                </a>
+            <div class="container mx-auto w-90 py-10">
+                <div class="category-slider">
+                    <a href="#" class="text-center flex justify-center">
+                        <img src="../assets/images/home/cups.webp" alt="Cups" class="mx-auto">
+                        <h3 class="text-base text-primary_dark font-normal mt-1">Cups</h3>
+                    </a>
+                    <a href="#" class="text-center">
+                        <img src="../assets/images/home/napkins.webp" alt="Napkins" class="mx-auto">
+                        <h3 class="text-base text-primary_dark font-normal mt-1">Napkins</h3>
+                    </a>
+                    <a href="#" class="text-center">
+                        <img src="../assets/images/home/sandwitch.webp" alt="Sandwitch" class="mx-auto">
+                        <h3 class="text-base text-primary_dark font-normal mt-1">Sandwitch</h3>
+                    </a>
+                    <a href="#" class="text-center">
+                        <img src="../assets/images/home/sauce_cups.webp" alt="Sauce Cups" class="mx-auto">
+                        <h3 class="text-base text-primary_dark font-normal mt-1">Sauce Cups</h3>
+                    </a>
+                    <a href="#" class="text-center">
+                        <img src="../assets/images/home/cups.webp" alt="Cups" class="mx-auto">
+                        <h3 class="text-base text-primary_dark font-normal mt-1">Cups</h3>
+                    </a>
+                    <a href="#" class="text-center">
+                        <img src="../assets/images/home/napkins.webp" alt="Napkins" class="mx-auto">
+                        <h3 class="text-base text-primary_dark font-normal mt-1">Napkins</h3>
+                    </a>
+                    <a href="#" class="text-center">
+                        <img src="../assets/images/home/sandwitch.webp" alt="Sandwitch" class="mx-auto">
+                        <h3 class="text-base text-primary_dark font-normal mt-1">Sandwitch</h3>
+                    </a>
+                    <a href="#" class="text-center">
+                        <img src="../assets/images/home/sauce_cups.webp" alt="Sauce Cups" class="mx-auto">
+                        <h3 class="text-base text-primary_dark font-normal">Sauce Cups</h3>
+                    </a>
+                    <a href="#" class="text-center">
+                        <img src="../assets/images/home/sandwitch.webp" alt="Sandwitch" class="mx-auto">
+                        <h3 class="text-base text-primary_dark font-normal mt-1">Sandwitch</h3>
+                    </a>
+                    <a href="#" class="text-center">
+                        <img src="../assets/images/home/sauce_cups.webp" alt="Sauce Cups" class="mx-auto">
+                        <h3 class="text-base text-primary_dark font-normal mt-1">Sauce Cups</h3>
+                    </a>
+                </div>
             </div>
         </section>
         <!-- category area end  -->
@@ -232,7 +1248,8 @@
 
         <!-- biopac benefits area start  -->
         <section class="bg-semi_white_two">
-            <div class="container mx-auto w-90 flex justify-between gap-20 py-14">
+            <div
+                class="container mx-auto w-90 flex flex-wrap justify-center gap-12 lg:flex-nowrap lg:justify-between lg:gap-20 py-14">
                 <div class="flex justify-start flex-col items-center text-center">
                     <img src="../assets/images/home/benefits-plant-made.svg" alt="Packaging Made from Plants"
                         class="h-[60px] w-auto">
@@ -276,27 +1293,28 @@
 
         <!-- feature area start  -->
         <section class="my-12">
-            <div class="container mx-auto w-90 flex justify-between gap-4">
-                <div>
+            <div
+                class="container flex flex-wrap justify-center gap-10 lg:justify-between lg:gap-4 mx-auto w-90 lg:flex-nowrap">
+                <div class="w-full text-center lg:text-left">
                     <img src="../assets/images/home/block-banner1.webp" alt="Feature 1"
-                        class="w-full max-h-72 rounded-lg">
+                        class="w-[500px] max-h-72 rounded-lg mx-auto">
                     <h2 class="font-montserrat text-xl font-bold mt-5 mb-3">Free, Next Day Shipping</h2>
                     <p class="font-normal text-base font-roboto text-black">Free delivery for four or more cartons,
                         delivered next
                         day to most metro areas.</p>
                     <a href="#" class="text-base text-primary_dark inline-block mt-2">Read more</a>
                 </div>
-                <div>
+                <div class="w-full text-center lg:text-left">
                     <img src="../assets/images/home/block-banner2.webp" alt="Feature 1"
-                        class="w-full max-h-72 rounded-lg">
+                        class="w-[500px] max-h-72 rounded-lg mx-auto">
                     <h2 class="font-montserrat text-xl font-bold mt-5 mb-3">Free, Next Day Shipping</h2>
                     <p class="font-normal text-base font-roboto text-black">Free delivery for four or more cartons,
                         delivered next day to most metro areas.</p>
                     <a href="#" class="text-base text-primary_dark inline-block mt-2">Read more</a>
                 </div>
-                <div>
+                <div class="w-full text-center lg:text-left">
                     <img src="../assets/images/home/block-banner-composting-3.webp" alt="Feature 1"
-                        class="w-full max-h-72 rounded-lg">
+                        class="w-[500px] max-h-72 rounded-lg mx-auto">
                     <h2 class="font-montserrat text-xl font-bold mt-5 mb-3">Free, Next Day Shipping</h2>
                     <p class="font-normal text-base font-roboto text-black">Free delivery for four or more cartons,
                         delivered next day to most metro areas.</p>
@@ -310,8 +1328,8 @@
 
         <!-- disposal page bottom banner start -->
         <section class="bg-disposal-bg text-white py-8">
-            <div class="container mx-auto w-90 flex items-center justify-between">
-                <div class="flex-1 text-center px-20 py-16">
+            <div class="container mx-auto w-90 flex flex-col lg:flex-row items-center justify-between">
+                <div class="flex-1 text-center px-10 lg:px-20 py-10 lg:py-16">
                     <h2 class="text-3xl font-roboto font-semibold">Start Composting</h2>
                     <p class="font-roboto text-xl font-normal mt-3"> Divert food and packaging from landfill and reverse
                         climate change.
@@ -320,7 +1338,7 @@
                     <a href="#" class="@apply primary-button mt-3">Join Compost Connect</a>
                 </div>
 
-                <div class="w-1/2 self-stretch">
+                <div class="w-full lg:w-1/2">
                     <iframe class="w-full aspect-video" frameborder="0" allowfullscreen=""
                         src="https://www.youtube.com/embed/VkIQ-_nif9A" data-element="video"></iframe>
                 </div>
@@ -331,51 +1349,390 @@
 
         <!-- slider area start -->
         <section class="py-9 bg-semi_white_two">
+            <h2 class="@apply heading text-primary">Share the Love</h2>
 
-            <h2 class="text-center font-bold font-montserrat text-primary py-4 text-3xl">Share the Love</h2>
-            <div class="flex gap-6 justify-center">
 
-                <figure
-                    class="max-w-[250px] max-h-[250px] overflow-hidden border-2 border-solid border-white shadow-xl">
-                    <img class="object-cover" src="../assets/images/home/image_0.webp" alt="Image one">
-                </figure>
+            <div class="image-slider">
+                <div class="max-w-[262px] relative group">
+                    <img class="w-full h-auto object-cover border-2 border-solid border-white shadow-xl "
+                        src="../assets/images/home/s-2.webp" alt="Image two">
 
-                <figure
-                    class="max-w-[250px] max-h-[250px] overflow-hidden border-2 border-solid border-white shadow-xl">
-                    <img class="object-cover" src="../assets/images/home/image_1.webp" alt="Image two">
-                </figure>
+                    <div
+                        class="absolute w-full h-full top-0 left-0 bg-black/80 text-white flex flex-col justify-center items-center gap-6 opacity-0 invisible duration-300 group-hover:opacity-100 group-hover:visible">
+                        <div class="text-semi_black_two text-xs font-roboto font-normal">April 14 2023</div>
+                        <h3 class="text-center px-8 text-[15px] font-roboto font-normal"
+                            style="-webkit-box-orient: vertical; -webkit-line-clamp: 4; display: -webkit-box; overflow: hidden;">
+                            📣
+                            CALLING PHOTOGRAPHERS
+                            AROUND THE GLOBE! 📣
+                            Entries for the 2023 Rainforest Rescue Canopy ...</h3>
+                    </div>
+                </div>
+                <div class="max-w-[262px] relative group">
+                    <img class="w-full h-auto object-cover border-2 border-solid border-white shadow-xl "
+                        src="../assets/images/home/s-1.webp" alt="Image two">
 
-                <figure
-                    class="max-w-[250px] max-h-[250px] overflow-hidden border-2 border-solid border-white shadow-xl">
-                    <img class="object-cover" src="../assets/images/home/image_0.webp" alt="Image one">
-                </figure>
+                    <div
+                        class="absolute w-full h-full top-0 left-0 bg-black/80 text-white flex flex-col justify-center items-center gap-6 opacity-0 invisible duration-300 group-hover:opacity-100 group-hover:visible">
+                        <div class="text-semi_black_two text-xs font-roboto font-normal">April 14 2023</div>
+                        <h3 class="text-center px-8 text-[15px] font-roboto font-normal"
+                            style="-webkit-box-orient: vertical; -webkit-line-clamp: 4; display: -webkit-box; overflow: hidden;">
+                            📣
+                            CALLING PHOTOGRAPHERS
+                            AROUND THE GLOBE! 📣
+                            Entries for the 2023 Rainforest Rescue Canopy ...</h3>
+                    </div>
+                </div>
+                <div class="max-w-[262px] relative group">
+                    <img class="w-full h-auto object-cover border-2 border-solid border-white shadow-xl "
+                        src="../assets/images/home/s-2.webp" alt="Image two">
 
-                <figure
-                    class="max-w-[250px] max-h-[250px] overflow-hidden border-2 border-solid border-white shadow-xl">
-                    <img class="object-cover" src="../assets/images/home/image_1.webp" alt="Image two">
-                </figure>
+                    <div
+                        class="absolute w-full h-full top-0 left-0 bg-black/80 text-white flex flex-col justify-center items-center gap-6 opacity-0 invisible duration-300 group-hover:opacity-100 group-hover:visible">
+                        <div class="text-semi_black_two text-xs font-roboto font-normal">April 14 2023</div>
+                        <h3 class="text-center px-8 text-[15px] font-roboto font-normal"
+                            style="-webkit-box-orient: vertical; -webkit-line-clamp: 4; display: -webkit-box; overflow: hidden;">
+                            📣
+                            CALLING PHOTOGRAPHERS
+                            AROUND THE GLOBE! 📣
+                            Entries for the 2023 Rainforest Rescue Canopy ...</h3>
+                    </div>
+                </div>
+                <div class="max-w-[262px] relative group">
+                    <img class="w-full h-auto object-cover border-2 border-solid border-white shadow-xl "
+                        src="../assets/images/home/s-1.webp" alt="Image two">
 
-                <figure
-                    class="max-w-[250px] max-h-[250px] overflow-hidden border-2 border-solid border-white shadow-xl">
-                    <img class="object-cover" src="../assets/images/home/image_0.webp" alt="Image one">
-                </figure>
+                    <div
+                        class="absolute w-full h-full top-0 left-0 bg-black/80 text-white flex flex-col justify-center items-center gap-6 opacity-0 invisible duration-300 group-hover:opacity-100 group-hover:visible">
+                        <div class="text-semi_black_two text-xs font-roboto font-normal">April 14 2023</div>
+                        <h3 class="text-center px-8 text-[15px] font-roboto font-normal"
+                            style="-webkit-box-orient: vertical; -webkit-line-clamp: 4; display: -webkit-box; overflow: hidden;">
+                            📣
+                            CALLING PHOTOGRAPHERS
+                            AROUND THE GLOBE! 📣
+                            Entries for the 2023 Rainforest Rescue Canopy ...</h3>
+                    </div>
+                </div>
+                <div class="max-w-[262px] relative group">
+                    <img class="w-full h-auto object-cover border-2 border-solid border-white shadow-xl "
+                        src="../assets/images/home/s-2.webp" alt="Image two">
+
+                    <div
+                        class="absolute w-full h-full top-0 left-0 bg-black/80 text-white flex flex-col justify-center items-center gap-6 opacity-0 invisible duration-300 group-hover:opacity-100 group-hover:visible">
+                        <div class="text-semi_black_two text-xs font-roboto font-normal">April 14 2023</div>
+                        <h3 class="text-center px-8 text-[15px] font-roboto font-normal"
+                            style="-webkit-box-orient: vertical; -webkit-line-clamp: 4; display: -webkit-box; overflow: hidden;">
+                            📣
+                            CALLING PHOTOGRAPHERS
+                            AROUND THE GLOBE! 📣
+                            Entries for the 2023 Rainforest Rescue Canopy ...</h3>
+                    </div>
+                </div>
+                <div class="max-w-[262px] relative group">
+                    <img class="w-full h-auto object-cover border-2 border-solid border-white shadow-xl "
+                        src="../assets/images/home/s-1.webp" alt="Image two">
+
+                    <div
+                        class="absolute w-full h-full top-0 left-0 bg-black/80 text-white flex flex-col justify-center items-center gap-6 opacity-0 invisible duration-300 group-hover:opacity-100 group-hover:visible">
+                        <div class="text-semi_black_two text-xs font-roboto font-normal">April 14 2023</div>
+                        <h3 class="text-center px-8 text-[15px] font-roboto font-normal"
+                            style="-webkit-box-orient: vertical; -webkit-line-clamp: 4; display: -webkit-box; overflow: hidden;">
+                            📣
+                            CALLING PHOTOGRAPHERS
+                            AROUND THE GLOBE! 📣
+                            Entries for the 2023 Rainforest Rescue Canopy ...</h3>
+                    </div>
+                </div>
+                <div class="max-w-[262px] relative group">
+                    <img class="w-full h-auto object-cover border-2 border-solid border-white shadow-xl "
+                        src="../assets/images/home/s-2.webp" alt="Image two">
+
+                    <div
+                        class="absolute w-full h-full top-0 left-0 bg-black/80 text-white flex flex-col justify-center items-center gap-6 opacity-0 invisible duration-300 group-hover:opacity-100 group-hover:visible">
+                        <div class="text-semi_black_two text-xs font-roboto font-normal">April 14 2023</div>
+                        <h3 class="text-center px-8 text-[15px] font-roboto font-normal"
+                            style="-webkit-box-orient: vertical; -webkit-line-clamp: 4; display: -webkit-box; overflow: hidden;">
+                            📣
+                            CALLING PHOTOGRAPHERS
+                            AROUND THE GLOBE! 📣
+                            Entries for the 2023 Rainforest Rescue Canopy ...</h3>
+                    </div>
+                </div>
+                <div class="max-w-[262px] relative group">
+                    <img class="w-full h-auto object-cover border-2 border-solid border-white shadow-xl "
+                        src="../assets/images/home/s-1.webp" alt="Image two">
+
+                    <div
+                        class="absolute w-full h-full top-0 left-0 bg-black/80 text-white flex flex-col justify-center items-center gap-6 opacity-0 invisible duration-300 group-hover:opacity-100 group-hover:visible">
+                        <div class="text-semi_black_two text-xs font-roboto font-normal">April 14 2023</div>
+                        <h3 class="text-center px-8 text-[15px] font-roboto font-normal"
+                            style="-webkit-box-orient: vertical; -webkit-line-clamp: 4; display: -webkit-box; overflow: hidden;">
+                            📣
+                            CALLING PHOTOGRAPHERS
+                            AROUND THE GLOBE! 📣
+                            Entries for the 2023 Rainforest Rescue Canopy ...</h3>
+                    </div>
+                </div>
+
 
             </div>
         </section>
         <!-- slider area end -->
 
 
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
+        <!-- Sustainability Area start  -->
+        <section class="my-12">
+            <div class="container mx-auto-w-90">
+                <div class="mb-4">
+                    <h1 class="@apply heading pb-0">Sustainability Wins</h1>
+                    <hr class="w-[20%] mx-auto h-[3px] bg-border_color_two border-none mt-1">
+                </div>
+
+                <div class="partner-slider flex justify-center gap-10">
+
+                    <div class="w-[220px] h-auto">
+                        <img src="../assets/images/home/APCO_2x.webp" alt="">
+                        <p class="font-roboto text-base text-center mt-2 font-bold text-primary_light_dark">Outstanding
+                            Achievement
+                            in
+                            Leadership Awards </p>
+                    </div>
+
+
+                    <div class="w-[220px] h-auto">
+                        <img src="../assets/images/home/Woolworths_2x.webp" alt="">
+                        <p class="font-roboto text-base text-center mt-2 font-bold text-primary_light_dark">Woolworth
+                            Supplier
+                            of the Year </p>
+                    </div>
+
+
+                    <div class="w-[220px] h-auto">
+                        <img src="../assets/images/home/wpo.webp" alt="">
+                        <p class="font-roboto text-base text-center mt-2 font-bold text-primary_light_dark">Worldstar
+                            Packaging </p>
+                    </div>
+
+
+                    <div class="w-[220px] h-auto">
+                        <img src="../assets/images/home/CCA_2x.webp" alt="">
+                        <p class="font-roboto text-base text-center mt-2 font-bold text-primary_light_dark">Food
+                            Packaging for
+                            Coca Cola </p>
+                    </div>
+
+                    <div class="w-[220px] h-auto">
+                        <img src="../assets/images/home/Woolworths_2x.webp" alt="">
+                        <p class="font-roboto text-base text-center mt-2 font-bold text-primary_light_dark">Woolworth
+                            Supplier
+                            of the Year </p>
+                    </div>
+
+                    <div class="w-[220px] h-auto">
+                        <img src="../assets/images/home/CCA_2x.webp" alt="">
+                        <p class="font-roboto text-base text-center mt-2 font-bold text-primary_light_dark">Food
+                            Packaging for
+                            Coca Cola </p>
+                    </div>
+
+                </div>
+        </section>
+        <!-- Sustainability Area end  -->
+
     </main>
 
+    <footer>
+        <!-- footer bottom feature start  -->
+        <section class="py-9 bg-semi_white_two">
+            <div class="container mx-auto-w-90 block lg:flex justify-between gap-4 px-3 lg:px-0">
+                <a href="#"
+                    class="bg-primary rounded-md py-10 text-white w-full lg:w-[32%] flex gap-3 justify-center items-center mb-4">
+                    <img class="w-[60px] h-auto" src="../assets/images/home/custom-pack-footer@2x.webp"
+                        alt="feature Logo">
+                    <h3 class="font-montserrat text-[21px] font-bold">Custom <br> Packaging</h3>
+                </a>
+                <a href="#"
+                    class="bg-primary_light_dark rounded-md py-10 text-white w-full lg:w-[32%] flex gap-3 justify-center items-center mb-4">
+                    <img class="w-[60px] h-auto" src="../assets/images/home/give-back-footer@2x.webp"
+                        alt="feature Logo">
+                    <h3 class="font-montserrat text-[21px] font-bold">Give Back <br> Fund</h3>
+                </a>
+                <a href="#"
+                    class="bg-primary_dark rounded-md py-10 text-white w-full lg:w-[32%] flex gap-3 justify-center items-center mb-4">
+                    <img class="w-[60px] h-auto" src="../assets/images/home/compost-footer@2x.webp" alt="feature Logo">
+                    <h3 class="font-montserrat text-[21px] font-bold">Compost <br> Connect</h3>
+                </a>
+            </div>
+        </section>
+        <!-- footer bottom feature end  -->
 
 
+        <!-- footer bottom form start  -->
+        <section class="py-9 bg-semi_white">
+            <div class="container mx-auto-w-90 flex flex-col lg:flex-row justify-between items-center px-4 lg:px-0">
+                <div class="block text-center mb-4 lg:w-1/3 lg:text-left lg:mb-0">
+                    <h2 class="font-montserrat text-lg font-bold text-semi_black mb-1">Be the First to Know</h2>
+                    <p class="w-full lg:max-w-[258px] font-roboto text-base font-normal">Sign up for the latest product
+                        news,
+                        sustainability trends and eco tips.
+                    </p>
+                </div>
+
+                <div class="block text-center mb-6 lg:w-1/3 lg:text-left lg:mb-0">
+                    <form class="flex">
+                        <input
+                            class="flex-1 bg-white border border-solid border-border_color font-roboto p-2 px-4 text-base focus:outline-none rounded-l-[4px]"
+                            type="email" name="email" id="email" placeholder="Email Address *">
+                        <button type="submit" area-label="Submit Button"
+                            class="text-sm font-roboto bg-primary_light_dark text-white px-6 font-bold rounded-r-[4px]">Submit</button>
+                    </form>
+                    <p class="font-roboto text-xs font-normal mt-1 leading-5">For more information on our privacy best
+                        practices,
+                        please review our <a href="#" class="text-primary_light_dark">privacy
+                            policy</a></p>
+                </div>
+
+                <div class="block lg:w-1/3 text-center lg:flex justify-center items-center gap-2">
+                    <h2 class="font-montserrat text-sm font-bold text-semi_black">Follow us on Social</h2>
+                    <div class="flex gap-2 items-center">
+                        <iconify-icon class="text-2xl text-primary_light_dark" icon="gg:facebook"></iconify-icon>
+                        <iconify-icon class="text-2xl text-primary_light_dark" icon="jam:linkedin"></iconify-icon>
+                        <iconify-icon class="text-2xl text-primary_light_dark" icon="mdi:twitter"></iconify-icon>
+                        <iconify-icon class="text-2xl text-primary_light_dark" icon="uil:youtube"></iconify-icon>
+                        <iconify-icon class="text-2xl text-primary_light_dark" icon="ph:instagram-logo"></iconify-icon>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- footer bottom form end  -->
+
+
+        <!-- footer menu start  -->
+        <section class="py-2 lg:py-9">
+            <div class="container mx-auto w-90 flex flex-col lg:flex-row lg:justify-between lg:gap-4">
+                <div class="w-full border-b border-semi_black py-4 lg:py-0 lg:border-none" id="footeraccordion1">
+                    <h5 class="accordion-header cursor-pointer lg:cursor-auto text-sm text-black font-bold font-montserrat lg:mb-2 flex justify-between items-center"
+                        onclick="toggleAccordion('footeraccordion1')">
+                        Shop
+                        Products
+                        <iconify-icon class="text-2xl text-primary_light_dark lg:hidden"
+                            icon="ic:outline-keyboard-arrow-down"></iconify-icon>
+                    </h5>
+                    <ul class="flex flex-col gap-2 @apply accordion-body">
+                        <li class="font-normal text-primary_light_dark font-roboto"><a href="#">BioPak Catalogue</a>
+                        </li>
+                        <li class="font-normal text-primary_light_dark font-roboto"><a href="#">BioPak Price List</a>
+                        </li>
+                        <li class="font-normal text-primary_light_dark font-roboto"><a href="#">Custom Packaging</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="w-full border-b border-semi_black py-4 lg:py-0 lg:border-none" id="footeraccordion2">
+                    <h5 class="cursor-pointer lg:cursor-auto text-sm text-black font-bold font-montserrat lg:mb-2 flex justify-between items-center"
+                        onclick="toggleAccordion('footeraccordion2')">
+                        Get to know us
+                        <iconify-icon class="text-2xl text-primary_light_dark lg:hidden"
+                            icon="ic:outline-keyboard-arrow-down"></iconify-icon>
+                    </h5>
+                    <ul class="flex flex-col gap-2 @apply accordion-body">
+                        <li class=" font-normal text-primary_light_dark font-roboto"><a href="#">Why Choose Biopak</a>
+                        </li>
+                        <li class="font-normal text-primary_light_dark font-roboto"><a href="#">Sustainability</a>
+                        </li>
+                        <li class="font-normal text-primary_light_dark font-roboto"><a href="#">Give Back Fund</a>
+                        </li>
+                        <li class="font-normal text-primary_light_dark font-roboto"><a href="#">Sustainable Sourcing</a>
+                        </li>
+                        <li class="font-normal text-primary_light_dark font-roboto"><a href="#">Media Centre</a>
+                        </li>
+                        <li class="font-normal text-primary_light_dark font-roboto"><a href="#">Press Coverage</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="w-full border-b border-semi_black py-4 lg:py-0 lg:border-none" id="footeraccordion3">
+                    <h5 class="cursor-pointer lg:cursor-auto text-sm text-black font-bold font-montserrat lg:mb-2 flex justify-between items-center"
+                        onclick="toggleAccordion('footeraccordion3')">
+                        Customer support
+                        <iconify-icon class="text-2xl text-primary_light_dark lg:hidden"
+                            icon="ic:outline-keyboard-arrow-down"></iconify-icon>
+                    </h5>
+                    <ul class="flex flex-col gap-2 @apply accordion-body">
+                        <li class="font-normal text-primary_light_dark font-roboto"><a href="#">Delivery & Returns</a>
+                        </li>
+                        <li class="font-normal text-primary_light_dark font-roboto"><a href="#">Payment Methods</a>
+                        </li>
+                        <li class="font-normal text-primary_light_dark font-roboto"><a href="#">Become a Distributor</a>
+                        </li>
+                        <li class="font-normal text-primary_light_dark font-roboto"><a href="#">FAQs</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="w-full border-b border-semi_black py-4 lg:py-0 lg:border-none" id="footeraccordion4">
+                    <h5 class="cursor-pointer lg:cursor-auto text-sm text-black font-bold font-montserrat lg:mb-2 flex justify-between items-center"
+                        onclick="toggleAccordion('footeraccordion4')">
+                        Get in Touch
+                        <iconify-icon class="text-2xl text-primary_light_dark lg:hidden"
+                            icon="ic:outline-keyboard-arrow-down"></iconify-icon>
+                    </h5>
+                    <ul class="flex flex-col gap-2 @apply accordion-body">
+                        <li class="font-normal text-primary_light_dark font-roboto"><a href="#">Contact Us</a>
+                        </li>
+                        <li class="font-normal text-primary_light_dark font-roboto"><a href="#"
+                                class="flex items-center gap-1">
+                                <iconify-icon class="text-lg"
+                                    icon="ic:baseline-email"></iconify-icon>sales@biopak.com.au
+                            </a>
+                        </li>
+                        <li class="font-normal text-primary_light_dark font-roboto"><a href="#"
+                                class="flex items-center gap-1">
+                                <iconify-icon class="text-lg" icon="material-symbols:phone-enabled"></iconify-icon> 1300
+                                246 725
+                            </a>
+                        </li>
+
+                        <img src="../assets/images/home/b-corp@2x.webp" alt="footer menu logo"
+                            class="max-w-[60px] h-auto hidden lg:block">
+
+                    </ul>
+                </div>
+                <img src="../assets/images/home/b-corp@2x.webp" alt="footer menu logo"
+                    class="max-w-[70px] h-auto lg:hidden mx-auto py-4">
+            </div>
+        </section>
+        <!-- footer menu end  -->
+
+
+        <!-- footer copyright area start  -->
+        <section class="bg-semi_white_two py-3">
+            <div class="container mx-auto-w-90 flex flex-col lg:flex-row lg:gap-4 items-center justify-center">
+                <p class="text-semi_black text-xs font-normal font-roboto">Copyright © 2022 BioPak. All rights reserved
+                    (FSC™ C110879).
+                </p>
+
+                <div class="flex gap-4 items-center">
+                    <a href="#"
+                        class="text-primary_light_dark text-xs font-normal font-roboto border-b border-primary_light_dark">Terms
+                        & Conditions</a>
+                    <a href=" #"
+                        class="text-primary_light_dark text-xs font-normal font-roboto border-b border-primary_light_dark">Privacy
+                        Policy</a>
+                    <a href="#"
+                        class="text-primary_light_dark text-xs font-normal font-roboto border-b border-primary_light_dark">Cookie
+                        Preferance</a>
+                </div>
+            </div>
+        </section>
+        <!-- footer copyright area end  -->
+
+    </footer>
+
+    <script src="./js/jquery-3.6.3.min.js"></script>
+    <script src="./js/jquery-migrate-3.4.1.min.js"></script>
+    <script src="./js/slick.min.js"></script>
     <script src="./js/iconify-icon.min.js"></script>
+    <script src="./js/index.js"></script>
 </body>
 
 </html>

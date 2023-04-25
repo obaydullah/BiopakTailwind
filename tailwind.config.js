@@ -31,6 +31,7 @@ module.exports = {
       semi_black_two: "#525660",
       border_color: "#e4e4e4",
       border_color_two: "#d3ccbd",
+      color_modal: "#0081ff",
     },
     borderWidth: {
       DEFAULT: "1px",

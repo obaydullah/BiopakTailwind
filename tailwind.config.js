@@ -13,8 +13,8 @@ module.exports = {
         90: "95%",
       },
       backgroundImage: {
-        "hero-bg": "url('../../src/assets/images/home/hero.webp')",
-        "disposal-bg": "url('../../src/assets/images/home/impact.webp')",
+        "hero-bg": "url('../../assets/images/home/hero.webp')",
+        "disposal-bg": "url('../../assets/images/home/impact.webp')",
       },
     },
     colors: {

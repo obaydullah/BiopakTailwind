@@ -1459,6 +1459,10 @@ video {
   font-size: 40px;
 }
 
+.text-\[7px\] {
+  font-size: 7px;
+}
+
 .text-base {
   font-size: 1rem;
   line-height: 1.5rem;
@@ -2065,5 +2069,10 @@ body {
 
   .lg\:text-\[15px\] {
     font-size: 15px;
+  }
+
+  .lg\:text-xs {
+    font-size: 0.75rem;
+    line-height: 1rem;
   }
 }

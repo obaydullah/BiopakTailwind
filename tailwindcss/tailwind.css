@@ -4,9 +4,9 @@
 
 @font-face {
   font-family: "Montserrat";
-  src: url("../../src/assets/fonts/Montserrat-Black.woff2") format("woff2"),
-    url("../../src/assets/fonts/Montserrat-Black.woff") format("woff"),
-    url("../../src/assets/fonts/Montserrat-Black.ttf") format("truetype");
+  src: url("../../assets/fonts/Montserrat-Black.woff2") format("woff2"),
+    url("../../assets/fonts/Montserrat-Black.woff") format("woff"),
+    url("../../assets/fonts/Montserrat-Black.ttf") format("truetype");
   font-weight: 900;
   font-style: normal;
   font-display: swap;
@@ -14,9 +14,9 @@
 
 @font-face {
   font-family: "Montserrat";
-  src: url("../../src/assets/fonts/Montserrat-Light.woff2") format("woff2"),
-    url("../../src/assets/fonts/Montserrat-Light.woff") format("woff"),
-    url("../../src/assets/fonts/Montserrat-Light.ttf") format("truetype");
+  src: url("../../assets/fonts/Montserrat-Light.woff2") format("woff2"),
+    url("../../assets/fonts/Montserrat-Light.woff") format("woff"),
+    url("../../assets/fonts/Montserrat-Light.ttf") format("truetype");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -24,9 +24,9 @@
 
 @font-face {
   font-family: "Montserrat";
-  src: url("../../src/assets/fonts/Montserrat-ExtraBold.woff2") format("woff2"),
-    url("../../src/assets/fonts/Montserrat-ExtraBold.woff") format("woff"),
-    url("../../src/assets/fonts/Montserrat-ExtraBold.ttf") format("truetype");
+  src: url("../../assets/fonts/Montserrat-ExtraBold.woff2") format("woff2"),
+    url("../../assets/fonts/Montserrat-ExtraBold.woff") format("woff"),
+    url("../../assets/fonts/Montserrat-ExtraBold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -34,9 +34,9 @@
 
 @font-face {
   font-family: "Montserrat";
-  src: url("../../src/assets/fonts/Montserrat-Bold.woff2") format("woff2"),
-    url("../../src/assets/fonts/Montserrat-Bold.woff") format("woff"),
-    url("../../src/assets/fonts/Montserrat-Bold.ttf") format("truetype");
+  src: url("../../assets/fonts/Montserrat-Bold.woff2") format("woff2"),
+    url("../../assets/fonts/Montserrat-Bold.woff") format("woff"),
+    url("../../assets/fonts/Montserrat-Bold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -44,9 +44,9 @@
 
 @font-face {
   font-family: "Montserrat";
-  src: url("../../src/assets/fonts/Montserrat-Medium.woff2") format("woff2"),
-    url("../../src/assets/fonts/Montserrat-Medium.woff") format("woff"),
-    url("../../src/assets/fonts/Montserrat-Medium.ttf") format("truetype");
+  src: url("../../assets/fonts/Montserrat-Medium.woff2") format("woff2"),
+    url("../../assets/fonts/Montserrat-Medium.woff") format("woff"),
+    url("../../assets/fonts/Montserrat-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -54,9 +54,9 @@
 
 @font-face {
   font-family: "Montserrat";
-  src: url("../../src/assets/fonts/Montserrat-Regular.woff2") format("woff2"),
-    url("../../src/assets/fonts/Montserrat-Regular.woff") format("woff"),
-    url("../../src/assets/fonts/Montserrat-Regular.ttf") format("truetype");
+  src: url("../../assets/fonts/Montserrat-Regular.woff2") format("woff2"),
+    url("../../assets/fonts/Montserrat-Regular.woff") format("woff"),
+    url("../../assets/fonts/Montserrat-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -64,9 +64,9 @@
 
 @font-face {
   font-family: "Montserrat";
-  src: url("../../src/assets/fonts/Montserrat-SemiBold.woff2") format("woff2"),
-    url("../../src/assets/fonts/Montserrat-SemiBold.woff") format("woff"),
-    url("../../src/assets/fonts/Montserrat-SemiBold.ttf") format("truetype");
+  src: url("../../assets/fonts/Montserrat-SemiBold.woff2") format("woff2"),
+    url("../../assets/fonts/Montserrat-SemiBold.woff") format("woff"),
+    url("../../assets/fonts/Montserrat-SemiBold.ttf") format("truetype");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -74,9 +74,9 @@
 
 @font-face {
   font-family: "Montserrat";
-  src: url("../../src/assets/fonts/Montserrat-Thin.woff2") format("woff2"),
-    url("../../src/assets/fonts/Montserrat-Thin.woff") format("woff"),
-    url("../../src/assets/fonts/Montserrat-Thin.ttf") format("truetype");
+  src: url("../../assets/fonts/Montserrat-Thin.woff2") format("woff2"),
+    url("../../assets/fonts/Montserrat-Thin.woff") format("woff"),
+    url("../../assets/fonts/Montserrat-Thin.ttf") format("truetype");
   font-weight: 100;
   font-style: normal;
   font-display: swap;
@@ -84,9 +84,9 @@
 
 @font-face {
   font-family: "Roboto";
-  src: url("../../src/assets/fonts/Roboto-Light.woff2") format("woff2"),
-    url("../../src/assets/fonts/Roboto-Light.woff") format("woff"),
-    url("../../src/assets/fonts/Roboto-Light.ttf") format("truetype");
+  src: url("../../assets/fonts/Roboto-Light.woff2") format("woff2"),
+    url("../../assets/fonts/Roboto-Light.woff") format("woff"),
+    url("../../assets/fonts/Roboto-Light.ttf") format("truetype");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -94,9 +94,9 @@
 
 @font-face {
   font-family: "Roboto";
-  src: url("../../src/assets/fonts/Roboto-Medium.woff2") format("woff2"),
-    url("../../src/assets/fonts/Roboto-Medium.woff") format("woff"),
-    url("../../src/assets/fonts/Roboto-Medium.ttf") format("truetype");
+  src: url("../../assets/fonts/Roboto-Medium.woff2") format("woff2"),
+    url("../../assets/fonts/Roboto-Medium.woff") format("woff"),
+    url("../../assets/fonts/Roboto-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -104,9 +104,9 @@
 
 @font-face {
   font-family: "Roboto";
-  src: url("../../src/assets/fonts/Roboto-Bold.woff2") format("woff2"),
-    url("../../src/assets/fonts/Roboto-Bold.woff") format("woff"),
-    url("../../src/assets/fonts/Roboto-Bold.ttf") format("truetype");
+  src: url("../../assets/fonts/Roboto-Bold.woff2") format("woff2"),
+    url("../../assets/fonts/Roboto-Bold.woff") format("woff"),
+    url("../../assets/fonts/Roboto-Bold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -114,9 +114,9 @@
 
 @font-face {
   font-family: "Roboto";
-  src: url("../../src/assets/fonts/Roboto-Black.woff2") format("woff2"),
-    url("../../src/assets/fonts/Roboto-Black.woff") format("woff"),
-    url("../../src/assets/fonts/Roboto-Black.ttf") format("truetype");
+  src: url("../../assets/fonts/Roboto-Black.woff2") format("woff2"),
+    url("../../assets/fonts/Roboto-Black.woff") format("woff"),
+    url("../../assets/fonts/Roboto-Black.ttf") format("truetype");
   font-weight: 900;
   font-style: normal;
   font-display: swap;
@@ -124,9 +124,9 @@
 
 @font-face {
   font-family: "Roboto";
-  src: url("../../src/assets/fonts/Roboto-Regular.woff2") format("woff2"),
-    url("../../src/assets/fonts/Roboto-Regular.woff") format("woff"),
-    url("../../src/assets/fonts/Roboto-Regular.ttf") format("truetype");
+  src: url("../../assets/fonts/Roboto-Regular.woff2") format("woff2"),
+    url("../../assets/fonts/Roboto-Regular.woff") format("woff"),
+    url("../../assets/fonts/Roboto-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -134,9 +134,9 @@
 
 @font-face {
   font-family: "Roboto";
-  src: url("../../src/assets/fonts/Roboto-Thin.woff2") format("woff2"),
-    url("../../src/assets/fonts/Roboto-Thin.woff") format("woff"),
-    url("../../src/assets/fonts/Roboto-Thin.ttf") format("truetype");
+  src: url("../../assets/fonts/Roboto-Thin.woff2") format("woff2"),
+    url("../../assets/fonts/Roboto-Thin.woff") format("woff"),
+    url("../../assets/fonts/Roboto-Thin.ttf") format("truetype");
   font-weight: 100;
   font-style: normal;
   font-display: swap;

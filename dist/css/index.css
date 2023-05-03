@@ -1821,12 +1821,6 @@ body {
 
 /* menu top component  */
 
-/* float: left;
-font-size: 13px;
-position: relative;
-text-decoration: none;
-margin-bottom: 0; */
-
 .placeholder\:text-semi_black::-moz-placeholder {
   --tw-text-opacity: 1;
   color: rgb(45 45 45 / var(--tw-text-opacity));

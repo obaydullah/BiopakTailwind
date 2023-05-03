@@ -952,10 +952,6 @@ video {
   width: 170px;
 }
 
-.w-\[180px\] {
-  width: 180px;
-}
-
 .w-\[20\%\] {
   width: 20%;
 }
@@ -988,6 +984,10 @@ video {
   width: 60px;
 }
 
+.w-\[80px\] {
+  width: 80px;
+}
+
 .w-auto {
   width: auto;
 }
@@ -998,10 +998,6 @@ video {
 
 .w-screen {
   width: 100vw;
-}
-
-.w-\[80px\] {
-  width: 80px;
 }
 
 .max-w-\[184px\] {
